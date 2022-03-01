@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% load static%}
+
+{% block content%}
+
+<!-- ========================= SEE ALL PRODUCTS NAV SECTION  ========================= -->
+<section id="all">
+    <header class="section-heading mt-2">
+        <a href="{% url 'store'%}" class="btn btn-outline-primary float-end">See all</a>
+        <h3 class="section-title">Popular products</h3>
+    </header><!-- sect-heading.// -->
+</section>
+<!-- ========================= END OF SEE ALL PRODUCTS NAV SECTION  ========================= -->
+
+<!-- ========================= BODY ========================= -->
+<section id="body">
+    <div class="row">
+        {% for product in products%}
+        <div class="col mb-2">
+            <div class="card" style="width: 18rem;">
+               <a href="{{ product.get_url}}"> <img src="{{ product.images.url}}" class="card-img" alt="..."> </a> 
+                <div class="card-body">
+                    <figcaption class="info-wrap">
+                        <a href="{{ product.get_url}}" class="title">{{ product.product_name}}</a>
+                        <div class="price mt-1">${{ product.price}}</div> <!-- price-wrap.// -->
+                    </figcaption>
+                </div>
+            </div>
+        </div> <!-- col.// -->
+        {% endfor%}
+    </div> <!-- row.// -->
+</section>
+<!-- ========================= END OF BODY SECTION // ========================= -->
+{% endblock%}
+

@@ -1,0 +1,134 @@
+{% load static%}
+<!-- =========== CAROUSEL  ============ -->
+<section id="carousel">
+    <div class="container-fluid">
+        <div id="services-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-target="1000"
+             data-bs-pause="hover">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <p>Web Development</p>
+                </div>
+                <div class="carousel-item">
+                   <p>Data Analysis</p>
+                </div>
+                <div class="carousel-item">
+                 <p>Computers and Computer Repair</p>
+                </div>
+                 <div class="carousel-item">
+                 <p>Electrical and Electronics</p>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#services-carousel"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#services-carousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div> <!-- services carousel.//-->
+    </div> <!--container-fluid.//-->
+</section>
+<!-- =========== END OF CAROUSEL  ============ -->
+
+<!--============== TITLE SECTION ===============-->
+<section id="title">
+    <!-- =========== NAVIGATION BAR  ============ -->
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Language</a>
+                    <ul class="dropdown-menu">
+                        <a href="#" class="nav-link"> English </a>
+                        <a href="#" class="nav-link"> Arabic </a>
+                        <a href="#" class="nav-link"> Russian </a>
+                    </ul>
+                </li>
+                <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">USD</a>
+                <ul class="dropdown-menu">
+                    <a href="#" class="nav-link"> EUR </a>
+                    <a href="#" class="nav-link"> AED </a>
+                    <a href="#" class="nav-link"> RUBL </a>
+                </ul>
+            </ul>
+
+            <ul class="navbar-nav">
+                <li><a href="#" class="nav-link"> <i class="fa fa-envelope"></i> Email </a></li>
+                <li><a href="#" class="nav-link"> <i class="fa fa-phone"></i> Call us </a></li>
+            </ul> <!-- list-inline //  -->
+        </div> <!-- navbar-collapse .// -->
+    </nav>
+    <!-- =========== END OF NAVIGATION BAR ============ -->
+
+    <!-- =========== TITLE LINKS ============ -->
+    <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-6 pad">
+            <div class="mt-2">
+                <div class="category-wrap dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa fa-bars"></i> All category
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'store'%}">All products</a>
+                        {% for category in links%}
+                        <a class="dropdown-item" href="{{ category.get_url}}">{{ category.category_name}}</a>
+                        {% endfor%}
+                    </div>
+                </div>  <!-- category-wrap.// -->
+            </div> <!-- margin top end-->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="mt-2 ms-2">
+                <a href="{% url 'store'%}" class="btn btn-outline-primary">Store</a>
+            </div> <!-- margin top end-->
+        </div>
+
+        <div class="col">
+            <div class="mt-2">
+                <form action="#" class="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form> <!-- search-wrap .end// -->
+            </div> <!-- margin top end-->
+        </div> <!-- col.// -->
+
+        <div class="col-lg-2 col-md-4 col-sm-6">
+            <div class="d-flex justify-content mt-2">
+
+
+                <div>
+                    <a href="./signin.html">Sign in</a> <span class="dark-transp">  </span>
+                    <a href="./register.html"> Register</a>
+
+                </div>
+                <a href="./cart.html" class="widget-header ms-2">
+                    <button type="button" class="btn btn-outline-primary position-relative">
+                        <div class="icon icon"><i class="fa fa-shopping-cart"></i></div>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger
+                    notify">0<span class="visually-hidden">unread messages</span>
+                    </span>
+                    </button>
+                </a>
+            </div> <!-- widgets-wrap.// -->
+        </div> <!-- col.// -->
+    </div> <!-- row.// -->
+    <!-- =========== END OF TITLE LINKS ============ -->
+</section>
+<!--============== END OF TITLE SECTION===============-->
+

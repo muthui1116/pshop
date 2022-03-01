@@ -1,0 +1,81 @@
+/*============== BODY ===============*/
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FCFAFA;
+}
+/*============== END OF BODY ===============*/
+
+
+/*============== HOME SECTION ================*/
+/*============== CAROUSEL ================*/
+#carousel{
+  background: #EDEDED;
+}
+.container-fluid{
+  padding: 1% 3%;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Atomic Age', cursive;
+}
+/*============== END OF CAROUSEL ================*/
+
+
+/*============== TITLE SECTION ===============*/
+#title{
+  padding: 2% 15%;
+}
+/*============= NAVIGATION BAR  ====================*/
+
+/*============= END OF NAVIGATION BAR ====================*/
+
+/*============= TITLE LINKS ====================*/
+#all{
+  padding: 2% 15%;
+}
+/*============== END OF TITLE LINKS ===============*/
+/*============== END OF TITLE SECTION ==============*/
+
+
+/*=========== CARDS DISPLAY ===============*/
+#body{
+  padding: 2% 15%;
+  text-align: center;
+}
+.card{
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  padding: 2px 2px 2px 2px;
+  cursor: pointer;
+}
+
+.card:hover{
+  transform: scale(1.02);
+  box-shadow: 0 5px 5px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+/*=========== END OF CARD DISPLAY===================*/
+/*============== END OF HOME SECTION ================*/
+
+
+/*============ STORE SECTION ====================*/
+#store{
+  padding: 2% 15%;
+}
+/*============ END OF STORE SECTION ====================*/
+
+
+/*============ PRODUCT_DETAIL SECTION ====================*/
+#product-detail{
+  padding: 2% 15%;
+}
+.detail{
+  background-color: #fff;
+}
+/*============ END OF PRODUCT_DETAIL SECTION ====================*/
+
+/*============ FOOTER ====================*/
+#footer{
+  padding: 2% 15%;
+  text-align: center;
+}
+/*============ END FOOTER =================*/

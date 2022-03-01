@@ -1,0 +1,151 @@
+{% extends 'base.html'%} {% load static%} {% block content%}
+
+
+<!-- ========================= SECTION PAGETOP ========================= -->
+<section id="store">
+  <div class="store-header">
+    <h2 class="store-title">Our Store</h2>
+  </header>
+  <!-- sect-heading.// -->
+  <!-- ========================= SECTION INTRO END// ========================= -->
+
+
+  <!-- ========================= SECTION CONTENT ========================= -->
+  <div class="row">
+   <div class="col-md-3">    
+    <div class="card">
+        <article class="filter-group">
+            <header class="card-header">
+                <a href="#" data-bs-toggle="collapse" data-target="#collapse_1" aria-expanded="true" class="">
+                    <h6 class="title">Categories <i class="icon-control fa fa-chevron-down"></i></h6>
+                </a>
+            </header>
+            <div class="filter-content collapse show" id="collapse_1">
+                <div class="card-body">
+                    <div><a href="{% url 'store'%}}">All products</a></div>
+                    {% for category in links%}
+                    <div><a href="{{ category.get_url}}">{{ category.category_name}}</a></div>
+                    {% endfor%}
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- filter-group  .//-->
+
+        <article class="filter-group">
+            <header class="card-header">
+                <a href="#" data-toggle="collapse" data-target="#collapse_4" aria-expanded="true" class="">
+                    
+                    <h6 class="title">Sizes <i class="icon-control fa fa-chevron-down"></i></h6>
+                </a>
+            </header>
+            <div class="filter-content collapse show" id="collapse_4">
+                <div class="card-body">
+                  <label class="checkbox-btn">
+                    <input type="checkbox">
+                    <span class="btn btn-light"> XS </span>
+                  </label>
+    
+                  <label class="checkbox-btn">
+                    <input type="checkbox">
+                    <span class="btn btn-light"> SM </span>
+                  </label>
+    
+                  <label class="checkbox-btn">
+                    <input type="checkbox">
+                    <span class="btn btn-light"> LG </span>
+                  </label>
+    
+                  <label class="checkbox-btn">
+                    <input type="checkbox">
+                    <span class="btn btn-light"> XXL </span>
+                  </label>
+            </div><!-- card-body.// -->
+            </div>
+        </article> <!-- filter-group .// -->
+        
+        <article class="filter-group">
+            <header class="card-header">
+                <a href="#" data-toggle="collapse" data-target="#collapse_3" aria-expanded="true" class="">
+                    <h6 class="title">Price range <i class="icon-control fa fa-chevron-down"></i></h6>
+                </a>
+            </header>
+            <div class="filter-content collapse show" id="collapse_3">
+                <div class="card-body">
+                    
+                    <div class="row">
+                    <div class="form-group col-md-6 mb-2">
+                      <label>Min</label>
+                      <!-- <input class="form-control" placeholder="$0" type="number"> -->
+                          <select class="mr-2 form-control">
+                            <option value="0">$0</option>
+                            <option value="50">$50</option>
+                            <option value="100">$100</option>
+                            <option value="150">$150</option>
+                            <option value="200">$200</option>
+                            <option value="500">$500</option>
+                            <option value="1000">$1000</option>
+                        </select>
+                    </div>
+                    <div class="form-group text-right col-md-6">
+                      <label>Max</label>
+                          <select class="mr-2 form-control">
+                            <option value="50">$50</option>
+                            <option value="100">$100</option>
+                            <option value="150">$150</option>
+                            <option value="200">$200</option>
+                            <option value="500">$500</option>
+                            <option value="1000">$1000</option>
+                            <option value="2000">$2000+</option>
+                        </select>
+                    </div>
+                    </div> <!-- form-row.// -->
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="button">Apply</button>
+                      </div>
+                </div><!-- card-body.// -->
+            </div>
+        </article> <!-- filter-group .// -->    
+    </div> <!-- card.// -->
+    </div> <!-- col.// -->
+
+
+    <main class="col-md-9">
+    <header class="border-bottom mb-4 pb-3">
+            <div class="form-inline">
+                <span class="mr-md-auto"><strong>{{ product_count}} </strong>Items found </span>
+                
+            </div>
+    </header><!-- sect-heading -->
+    
+    <div class="row">
+       {% for product in products%}
+       <div class="col mb-2">
+        <div class="card" style="width: 13rem;">
+          <a href="{{ product.get_url}}">  <img class="card-img" src="{{ product.images.url}}" alt="..."></a>
+            <div class="card-body">
+                <figcaption class="info-wrap">
+                    <a href="{{ product.get_url}}" class="title">{{ product.product_name}}</a>
+                    <div class="price mt-1">${{ product.price}}</div> <!-- price-wrap.// -->
+                </figcaption>
+            </div>
+        </div>
+    </div> <!-- col.// -->
+    {% endfor%}
+    </div> <!-- row end.// -->
+    <nav class="mt-4" aria-label="Page navigation sample">
+      <ul class="pagination">
+        <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+    
+        </main> <!-- col.// -->
+    
+    </div>
+    
+    </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+{% endblock%}
