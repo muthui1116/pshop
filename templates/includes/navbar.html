@@ -94,9 +94,9 @@
 
         <div class="col">
             <div class="mt-2">
-                <form action="#" class="search">
+                <form action="{% url 'search'%}" class="search" method="GET">
                     <div class="input-group">
-                        <input type="text" class="form-control" style="width:60%;" placeholder="Search">
+                        <input type="text" class="form-control" style="width:60%;" placeholder="Search" name="keyword">
 
                         <div class="input-group-append">
                             <button class="btn btn-primary" type="submit">
@@ -117,11 +117,11 @@
                     <a href="./register.html"> Register</a>
 
                 </div>
-                <a href="./cart.html" class="widget-header ms-2">
+                <a href="{% url 'cart'%}" class="widget-header ms-2">
                     <button type="button" class="btn btn-outline-primary position-relative">
                         <div class="icon icon"><i class="fa fa-shopping-cart"></i></div>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger
-                    notify">0<span class="visually-hidden">unread messages</span>
+                    notify">{{ cart_count}}<span class="visually-hidden">unread messages</span>
                     </span>
                     </button>
                 </a>

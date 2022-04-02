@@ -73,7 +73,19 @@ body{
 }
 /*============ END OF PRODUCT_DETAIL SECTION ====================*/
 
+/*============ CART SECTION ====================*/
+#cart{
+  padding: 2% 15%;
+}
+
+
+/*============ END OF CART SECTION ====================*/
+.width{
+  width:auto;
+}
 /*============ FOOTER ====================*/
+
+
 #footer{
   padding: 2% 15%;
   text-align: center;
