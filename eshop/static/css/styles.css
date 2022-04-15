@@ -22,7 +22,7 @@ body{
 
 /*============== TITLE SECTION ===============*/
 #title{
-  padding: 2% 15%;
+  padding: 2% 13%;
 }
 /*============= NAVIGATION BAR  ====================*/
 
@@ -30,7 +30,7 @@ body{
 
 /*============= TITLE LINKS ====================*/
 #all{
-  padding: 2% 15%;
+  padding: 2% 13%;
 }
 /*============== END OF TITLE LINKS ===============*/
 /*============== END OF TITLE SECTION ==============*/
@@ -38,7 +38,7 @@ body{
 
 /*=========== CARDS DISPLAY ===============*/
 #body{
-  padding: 2% 15%;
+  padding: 2% 13%;
   text-align: center;
 }
 .card{
@@ -59,14 +59,14 @@ body{
 
 /*============ STORE SECTION ====================*/
 #store{
-  padding: 2% 15%;
+  padding: 2% 13%;
 }
 /*============ END OF STORE SECTION ====================*/
 
 
 /*============ PRODUCT_DETAIL SECTION ====================*/
 #product-detail{
-  padding: 2% 15%;
+  padding: 2% 13%;
 }
 .detail{
   background-color: #fff;
@@ -75,7 +75,7 @@ body{
 
 /*============ CART SECTION ====================*/
 #cart{
-  padding: 2% 15%;
+  padding: 2% 13%;
 }
 
 
@@ -87,7 +87,11 @@ body{
 
 
 #footer{
-  padding: 2% 15%;
+  padding: 2% 13%;
   text-align: center;
 }
 /*============ END FOOTER =================*/
+
+.auth-user{
+  font-size: 0.7rem;
+}

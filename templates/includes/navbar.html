@@ -112,10 +112,16 @@
             <div class="d-flex justify-content mt-2">
 
 
-                <div>
-                    <a href="./signin.html">Sign in</a> <span class="dark-transp">  </span>
-                    <a href="./register.html"> Register</a>
-
+                <div class="auth-user">
+                    {% if user.id is None%}
+                    <div> <small class="text-muted">welcome guest!</small> </div>
+                    <a href="{% url 'login'%}">Sign in</a><span class="dark-transp">|</span>
+                    <a href="{% url 'register'%}"> Register</a>
+                    {% else%}
+                    <div> <small class="text-muted">welcome {{ user.first_name}}</small> </div>
+                    <a href="{% url 'dashboard'%}">D-board</a><span class="dark-transp">|</span>
+                    <a href="{% url 'logout'%}">Logout</a>
+                    {% endif%}
                 </div>
                 <a href="{% url 'cart'%}" class="widget-header ms-2">
                     <button type="button" class="btn btn-outline-primary position-relative">
